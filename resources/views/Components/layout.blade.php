@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+    <title>Home</title>
 </head>
 
 <body>
-    <h1>Hello from the about page</h1>
+    <x-nav-link>
+
+    </x-nav-link>
+
+    {{ $slot }}
 </body>
 
 </html>
