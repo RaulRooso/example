@@ -22,3 +22,4 @@ Route::post('/register', [RegisterUserController::class, 'store']);
 
 Route::get('/login', [SessinonController::class, 'create']);
 Route::post('/login', [SessinonController::class, 'store']);
+Route::post('/logout', [SessinonController::class, 'destroy']);
