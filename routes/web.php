@@ -11,6 +11,11 @@ use App\Http\Controllers\SessinonController;
 //     return view('welcome');
 // });
 
+
+// \Illuminate\Support\Facades\Mail::to('raul.rooso@tptlive.ee')->send(new \App\Mail\JobPosted());
+// return 'Done';
+
+
 Route::view('/', 'home');
 Route::view('/contact', 'contact');
 
