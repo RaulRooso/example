@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RegisterUserController;
 use App\Http\Controllers\SessinonController;
-
+use App\Jobs\TranslateJob;
 
 
 // Route::get('/', function () {
@@ -12,8 +12,12 @@ use App\Http\Controllers\SessinonController;
 // });
 
 
-// \Illuminate\Support\Facades\Mail::to('raul.rooso@tptlive.ee')->send(new \App\Mail\JobPosted());
-// return 'Done';
+Route::get('test', function () {
+    $job = App\Models\Job::first();
+    TranslateJob::dispatch($job);
+
+    return 'Done';
+});
 
 
 Route::view('/', 'home');
